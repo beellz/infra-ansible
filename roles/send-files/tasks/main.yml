@@ -1,0 +1,17 @@
+- name: Putting local Sql into RDS and showcase
+  script: /home/beellz/ansible-basic/sqlfile.sh
+  register: find_output
+- debug: var={{item}}
+  loop:
+    - find_output.stdout_lines
+
+- name: Connecting to RDS script 
+  script: /home/beellz/ansible-basic/connectsql.sh
+  register: find_output
+- debug: var={{item}}
+  loop:
+    - find_output.stdout_lines
+
+
+
+

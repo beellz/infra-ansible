@@ -1,0 +1,9 @@
+---
+- hosts: linux
+  become: yes
+  remote_user: ubuntu
+
+  roles:
+  - copy-mode
+  - postgres-client
+  - send-files

@@ -1,0 +1,11 @@
+- name: Install PostgreSQL
+  apt:
+    name: postgresql
+    state: latest
+    update-cache: true     
+
+- name: Start PostgreSQL
+  service:
+    name: postgresql
+    state: started  
+
